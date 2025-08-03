@@ -1666,3 +1666,31 @@
     </script>
 </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // FAQ accordion
+        $('.faq-question').on('click', function() {
+            const $parent = $(this).parent();
+            const $answer = $parent.find('.faq-answer');
+            const $toggle = $parent.find('.faq-toggle');
+            
+            // Tıklananı aç/kapat
+            $answer.toggleClass('active');
+            $toggle.toggleClass('active');
+            
+            if ($answer.hasClass('active')) {
+                $answer.css('max-height', $answer[0].scrollHeight + 'px');
+            } else {
+                $answer.css('max-height', '0');
+            }
+            
+            // Diğerlerini kapat
+            $('.faq-item').not($parent).find('.faq-answer').removeClass('active').css('max-height', '0');
+            $('.faq-item').not($parent).find('.faq-toggle').removeClass('active');
+        });
+        
+        // Sayfa yüklendiğinde ilk soruyu aç
+        $('.faq-item:first-child .faq-question').trigger('click');
+    });
+</script>
