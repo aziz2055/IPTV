@@ -5,6 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
     <title>Gurbetçi IPTV - Türk Dizileri ve Maçlar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -15,6 +16,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+    html, body {
+        overflow-x: auto;
+        min-width: 1200px;
+    }
         :root {
             --primary: #6a11cb;
             --secondary: #2575fc;
@@ -338,6 +343,12 @@
             flex-wrap: wrap;
             justify-content: center;
             margin: 20px 0;
+       
+            .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
         }
         .club-item {
             text-align: center;
